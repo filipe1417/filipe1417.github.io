@@ -5,8 +5,8 @@
 </head>
 <body>
 	<h1>Projetos de cibersegurança</h1>
-	<a href="https://github.com/filipe1417"><h3>github.com/filipe1417</h3></a>
-	<hr size="1" style="border:1px dashed;">
+	<a href="https://github.com/filipe1417">github.com/filipe1417</a>
+	<hr class="divisao" size="1" style="border:1px dashed;">
 	
 	<div class="bloco">
 		<h2>Scanning</h2>

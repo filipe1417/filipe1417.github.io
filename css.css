@@ -1,3 +1,7 @@
+a {
+    font-size: 18px;
+}
+
 .bloco{
     width: 50%;
     float: left;
@@ -10,5 +14,11 @@
     width:100%;
     float: none;
     margin-top: 0px;
+  }
+
+  .divisao {
+      
+    margin-bottom: 35px;
+    
   }
 }
