@@ -9,11 +9,11 @@
 	
 	<div class="bloco">
 		<h2>Projetos</h2>
-		<a href="https://github.com/filipe1417/python-portscan-rapido">Portscan com python</a>
+		<a href="/projetos-ciber">Portscan com python</a>
 	</div>
 	<div class="bloco">
 		<h2>Acrescente/altere conteúdo</h2>
-		<a href="/arp-poisoning">ARP poisoning</a>
+		<a href="https://github.com/filipe1417/projetos-ciber>ARP poisoning</a>
 	</div>
 </body>
 </html>
