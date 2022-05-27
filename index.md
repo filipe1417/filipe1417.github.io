@@ -8,12 +8,10 @@
 	<hr size="1" style="border:1px dashed;">
 	
 	<div class="bloco">
-		<h2>Projetos</h2>
-		<a href="/projetos-ciber">Portscan com python</a>
+		<a href="/projetos-ciber"><h3>Projetos</h3></a>
 	</div>
 	<div class="bloco">
-		<h2>Acrescente/altere conteúdo</h2>
-		<a href="https://github.com/filipe1417/projetos-ciber>ARP poisoning</a>
+		<a href="https://github.com/filipe1417/projetos-ciber"><h3>Acrescente/altere conteúdo</h3></a>
 	</div>
 </body>
 </html>
