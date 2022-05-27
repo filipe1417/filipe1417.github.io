@@ -18,7 +18,7 @@
 	</div>
 	<div class="bloco">
 		<h2>Análise de tráfego</h2>
-		<a href="https://filipe1417.github.io/wireshark/">Wireshark</a>
+		<a href="/wireshark">Wireshark</a>
 	</div>
 </body>
 </html>
