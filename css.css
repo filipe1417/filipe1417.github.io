@@ -1,7 +1,3 @@
-a {
-    font-size: 18px;
-}
-
 .bloco{
     width: 50%;
     float: left;
@@ -9,16 +5,13 @@ a {
     height: 130px;
 }
 
+.bloco a{
+    font-size:19px;
+}
+
 @media only screen and (max-width: 705px) {
   .bloco {
     width:100%;
     float: none;
-    margin-top: 0px;
-  }
-
-  .divisao {
-      
-    margin-bottom: 35px;
-    
   }
 }
