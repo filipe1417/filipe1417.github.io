@@ -20,6 +20,7 @@
 
 title: Projetos de cibersegurança
 email: filipe1417@gmail.com
+lang: "pt-BR"
 description: >- # this means to ignore newlines until "baseurl:"
   Serão criados projetos que cobrem pontos importantes no estudo de cibersegurança. Serão abordadas tanto teoria quanto prática. 
 baseurl: "" # the subpath of your site, e.g. /blog
