@@ -4,8 +4,7 @@
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
-	<h1>Projetos de cibersegurança</h1>
-	<a href="https://github.com/filipe1417">github.com/filipe1417</a>
+	<a style="text-decoration:none" href="https://github.com/filipe1417"><h2>github.com/filipe1417</h2></a>
 	<hr size="1" style="border:1px dashed;">
 	
 	<div class="bloco">
@@ -14,7 +13,7 @@
 	</div>
 	<div class="bloco">
 		<h2>Ataques que permitem Man In The Middle</h2>
-		<a href="https://filipe1417.github.io/arp-poisoning/">ARP poisoning</a>
+		<a href="/arp-poisoning">ARP poisoning</a>
 	</div>
 	<div class="bloco">
 		<h2>Análise de tráfego</h2>
