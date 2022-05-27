@@ -5,23 +5,25 @@
 }
 
 .bloco{
-    margin-top: 30px;
-    text-align: center;
+    margin-top: 45px; 
     width: 40%;
+    text-align: center;
 }
 
 .bloco a{
-    font-size: 22px;
+    font-size: 23px;
     padding: 10px;
-    border: 1px solid;
-    border-radius: 10px;
+    border-left: 4px solid;
+    border-right: 1px solid;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 799px) {
   .bloco {
-    width:100%;
-    float: none;
+    width:80%;
     height: auto;
+    text-align: justify;
   }
 
   .menu{
