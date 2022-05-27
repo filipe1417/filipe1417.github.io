@@ -1,18 +1,30 @@
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 .bloco{
-    width: 50%;
-    float: left;
     margin-top: 30px;
-    height: 130px;
+    text-align: center;
+    width: 40%;
 }
 
 .bloco a{
-    font-size:19px;
+    font-size: 22px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10px;
 }
 
-@media only screen and (max-width: 705px) {
+@media only screen and (max-width: 750px) {
   .bloco {
     width:100%;
     float: none;
     height: auto;
+  }
+
+  .menu{
+      display:block;
   }
 }
