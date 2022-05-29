@@ -5,7 +5,7 @@ layout: blog
 ---
 <head>
 	<meta charset="utf-8">
-    <link rel="stylesheet" href="css.scss">
+    <link rel="stylesheet" href="css.css">
 </head>
 <div class="bloco">
     <h2>Scanning</h2>

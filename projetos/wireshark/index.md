@@ -1,6 +1,7 @@
 ---
 title: Wireshark
-description: "Uso do wireshark para analisar tráfego em rede. Serão abordados a personalização de perfis, filtros e prática na análisa"
+description: "Nesse módulo, serão abordadas a personalização de perfis, filtros e prática de análise de tráfego. Os conteúdos ficarão divididos entre três sub-módulos. 
+Vale ressaltar que o módulo de wireshark profiles é um tema à parte, não sendo necessário para o entendimento dos próximos."
 layout: post
 parent: /projetos
 ---
