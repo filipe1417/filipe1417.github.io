@@ -10,7 +10,7 @@ remote_theme: abhinavs/moonwalk
 permalink: //:title/
 
 favicon: "./icon.png"
-github_repository_url: "https://github.com/filipe1417/projetos-ciber"
+github_repository_url: "https://github.com/filipe1417/filipe1417.github.io"
 theme_config:
   appearance: "dark" # can be "light", "dark" or "auto"
   appearance_toggle: true # if appearance can be switched by user
