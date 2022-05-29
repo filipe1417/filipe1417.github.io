@@ -77,7 +77,8 @@ html {
 @mixin dark-appearance {
   html, body  {
       --headings: #74c0fc;
-      --links: #91A7FF;
+      //--links: #91A7FF;
+      --links: #E4E4E4;
       --highlight: #41C7C7;
       --bg: #1f242A;
       --bg-secondary: #323945;

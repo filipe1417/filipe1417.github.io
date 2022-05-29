@@ -13,14 +13,14 @@ parent: /projetos
 <hr>
 <ul class ="horizontal-list">
     <li class="card">
-        <a href="profiles">
+        <a class="bloco" href="profiles">
             <span>Profiles</span>
             <hr>
             <p>Customizando o Layout do wireshark para melhor análise.</p>
         </a>
     </li>
      <li class="card">
-        <a href="filtros">
+        <a class="bloco" href="filtros">
             <span>Filtros</span>
             <hr>
             <p>Quais os tipos de filtros e como utilizá-los corretamente.</p>
