@@ -13,7 +13,7 @@ layout: home
 	    <a class="card" href="/projetos">Projetos</a>
     </li>
     <li class="bloco">
-		<a class="card" href="https://github.com/filipe1417/projetos-ciber">Acrescente conteúdo</a>
+		<a class="card" href="https://github.com/filipe1417/filipe1417.github.io">Acrescente conteúdo</a>
     </li>
     </ul>
 </body>
