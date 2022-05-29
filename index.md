@@ -8,17 +8,14 @@ layout: home
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
-	<a style="text-decoration:none" href="https://github.com/filipe1417"><h2>github.com/filipe1417</h2></a>
-	<hr size="1" style="border:1px dashed;">
-	
-    <div class="menu">
-	<div class="bloco">
-		<a href="/projetos">Projetos</a>
-	</div>
-	<div class="bloco">
-		<a href="https://github.com/filipe1417/projetos-ciber">Acrescente conteúdo</a>
-	</div>
-    </div>
+    <ul class="horizontal-list">
+	<li class="card">
+		<a class="" href="/projetos">Projetos</a>
+	</li>
+	<li class="card">
+		<a class="" href="https://github.com/filipe1417/projetos-ciber">Acrescente conteúdo</a>
+	</li>
+    </ul>
 </body>
 </html>
 
