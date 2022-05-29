@@ -1,3 +1,7 @@
+---
+layout: home
+---
+
 <html>
 <head>
 	<meta charset="utf-8">
@@ -9,7 +13,7 @@
 	
     <div class="menu">
 	<div class="bloco">
-		<a href="/projetos-ciber">Projetos</a>
+		<a href="/projetos">Projetos</a>
 	</div>
 	<div class="bloco">
 		<a href="https://github.com/filipe1417/projetos-ciber">Acrescente conteúdo</a>
@@ -17,3 +21,4 @@
     </div>
 </body>
 </html>
+
