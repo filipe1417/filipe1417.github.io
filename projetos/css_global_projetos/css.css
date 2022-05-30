@@ -1,0 +1,29 @@
+.bloco{
+    display: inline-block !important;
+    width: 100% !important;
+    height: 100% !important;
+    transition: 0.2s;
+}
+
+.bloco span{
+    color: var(--headings);
+}
+
+.card {
+    padding:0;
+    transition: 0.2s;
+}
+
+.card:hover{
+    background: var(--text);
+    border: 1px solid var(--bg-secondary);
+}
+
+.bloco:hover .descricao-card{
+    color: var(--bg);
+}
+
+.bloco:hover .heading-card{
+    color: var(--bg);
+}
+

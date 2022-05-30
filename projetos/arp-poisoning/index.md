@@ -8,23 +8,23 @@ parent: /projetos
 
 <html>
 <head>
-     <link rel="stylesheet" href="css.css">
+     <link rel="stylesheet" href="../css_global_projetos/css.css">
 </head>
 <body>
 <hr>
 <ul class ="horizontal-list">
     <li class="card">
         <a class="bloco" href="arp">
-            <span>ARP</span>
+            <span class="heading-card">ARP</span>
             <hr>
-            <p>Funcionamento do ARP. Prática realizada com o Scapy junto ao python.</p>
+            <p class="descricao-card">Funcionamento do ARP. Prática realizada com o Scapy junto ao python.</p>
         </a>
     </li>
      <li class="card">
         <a class="bloco" href="poisoning">
-            <span>Poisoning</span>
+            <span class="heading-card">Poisoning</span>
             <hr>
-            <p>O que é o envenenamento ARP e quais ataques ele permite.</p>
+            <p class="descricao-card">O que é o envenenamento ARP e quais ataques ele permite.</p>
         </a>
     </li>
 </ul>

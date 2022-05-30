@@ -8,23 +8,23 @@ parent: /projetos
 
 <html>
 <head>
-     <link rel="stylesheet" href="css.css">
+     <link rel="stylesheet" href="../css_global_projetos/css.css">
 </head>
 <body>
 <hr>
 <ul class ="horizontal-list">
     <li class="card">
         <a class="bloco" href="profiles">
-            <span>Profiles</span>
+            <span class="heading-card">Profiles</span>
             <hr>
-            <p>Customizando o Layout do wireshark para melhor análise.</p>
+            <p class="descricao-card">Customizando o Layout do wireshark para melhor análise.</p>
         </a>
     </li>
      <li class="card">
         <a class="bloco" href="filtros">
-            <span>Filtros</span>
+            <span class="heading-card">Filtros</span>
             <hr>
-            <p>Quais os tipos de filtros e como utilizá-los corretamente.</p>
+            <p class="descricao-card">Quais os tipos de filtros e como utilizá-los corretamente.</p>
         </a>
     </li>
 </ul>
