@@ -1,6 +1,6 @@
 ---
 title: Wireshark filtros
-description: "Será mostrado os tipos de filtros presentes no wireshark, teoria e prática. Além disso, será possível perceber a importância de utilizá-los."
+description: "Serão apresentados os tipos de filtros presentes no wireshak, tanto seu funcionamento como suas aplicações. Além disso, será possível perceber a importância de utilizar filtros durante a análise de tráfego em redes."
 layout: post
 parent: /projetos/wireshark
 ---
