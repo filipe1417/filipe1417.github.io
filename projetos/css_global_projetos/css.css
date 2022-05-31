@@ -11,7 +11,7 @@
 
 .card {
     padding:0 !important;
-    transition: 0.2s;
+    transition: 0.2s !important;
 }
 
 .card:hover{
