@@ -14,15 +14,15 @@
 }
 
 .card:hover{
-    background: var(--text);
-    border: 1px solid var(--bg-secondary);
+    background: var(--bg-card);
+    border: 1px solid;
 }
 
 .bloco:hover .descricao-card{
-    color: var(--bg);
+    color: var(--texto-card);
 }
 
 .bloco:hover .heading-card{
-    color: var(--bg);
+    color: var(--heading-card);
 }
 

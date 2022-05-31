@@ -1,7 +1,44 @@
-.horizontal-list{
-    margin-top:40px !important;
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 20px;
+}
+    
+.bloco{
+    background: var(--bg-secondary);
+    border-radius:15px;
+    margin: 15px;
 }
 
-.card p{
-    font-size: 30px;
+
+.bloco a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.bloco h2{
+    margin-left: 7px;
+    margin-top: 0;
+    padding-top: 15px;
+}
+
+.bloco:hover{
+   background: var(--bg-card);
+}
+
+.bloco:hover h2{
+    color: var(--heading-card);
+}
+
+.bloco:hover li{
+    color: var(--texto-card);
+}
+
+@media (max-width: 700px) {
+  .grid-container {
+    display: block;
+    margin-top: 50px;
+  }
 }

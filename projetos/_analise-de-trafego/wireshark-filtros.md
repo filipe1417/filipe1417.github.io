@@ -2,12 +2,11 @@
 title: Wireshark filtros
 description: "Serão apresentados os tipos de filtros presentes no wireshak, tanto seu funcionamento como suas aplicações. Além disso, será possível perceber a importância de utilizar filtros durante a análise de tráfego em redes."
 layout: post
-parent: /projetos/wireshark
+parent: /analise-de-trafego
 ---
 
 <html>
 <head>
-     <link rel="stylesheet" href="css.css">
 </head>
 </html>
 
@@ -47,7 +46,7 @@ Para isso, vamos acessar as opções de captura, no momento antes de escolher a 
 
 Detalhe importante, sempre que vc clicar em um campo dentro de um pacote, no canto inferior esquerdo, o wireshark irá dizer como vc pode filtrar a partir daquele campo.
 
-![Untitled](projetos-ciber/wireshark/imagem1.png)
+![Untitled](imagem1.png)
 
 No exemplo acima, ao clicar na flag tcp SYN, podemos visualizar no canto inferior esquerdo que podemos utilizar “tcp.flags.syn” para filtrar no Display filter.
 

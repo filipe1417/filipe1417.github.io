@@ -2,7 +2,7 @@
 title: "ARP"
 description: "Teoria e prática do funcionamento do ARP"
 layout: post
-parent: /projetos/arp-poisoning
+parent: /man-in-the-middle
 ---
 
 # Tabela de conteúdos
@@ -253,5 +253,3 @@ OBS: Organizar referências:
 - Documentação Scapy - https://scapy.readthedocs.io/en/latest/
 - RFC 826 
 - ...
-
-

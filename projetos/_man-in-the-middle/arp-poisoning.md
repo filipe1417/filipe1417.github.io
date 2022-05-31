@@ -2,8 +2,8 @@
 title: "ARP poisoning"
 description: "Teoria e prática sobre o envenenamento ARP, um grande perigo às redes Ethernet. O foco será principalmente ataques do tipo Man in the middle, mas também serão apresentados outros tipos."
 codigoURL: "https://github.com/filipe1417/arp-poisoning"
+parent: /man-in-the-middle
 layout: post
-parent: /projetos/arp-poisoning
 ---
 
 # Tabela de conteúdos

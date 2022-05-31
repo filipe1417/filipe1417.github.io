@@ -2,12 +2,11 @@
 title: Wireshark profiles
 description: "Uso do wireshark para analisar tráfego em rede. Serão abordados a personalização de perfis, filtros e prática na análisa"
 layout: post
-parent: "/projetos/wireshark"
+parent: "/analise-de-trafego"
 ---
 
 <html>
 <head>
-     <link rel="stylesheet" href="../css.css">
 </head>
 </html>
 

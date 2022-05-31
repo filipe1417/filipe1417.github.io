@@ -7,7 +7,17 @@ description: >
 #theme: moonwalk # if you are using GitHub Pages, change it to remote_theme: abhinavs/moonwalk
 remote_theme: abhinavs/moonwalk
 
-permalink: //:title/
+collections:
+  scanning:
+    output: true
+    permalink: /:collection/:name
+  man-in-the-middle:
+    output: true
+    permalink: /:collection/:name
+  analise-de-trafego:
+    output: true
+    permalink: /:collection/:name
+collections_dir: projetos
 
 favicon: "./icon.png"
 github_repository_url: "https://github.com/filipe1417/filipe1417.github.io"
