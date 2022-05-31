@@ -6,6 +6,7 @@ layout: home
 <head>
 	<meta charset="utf-8">
     <link rel="stylesheet" href="css.css">
+    <link rel="canonical" href="{{ site.url }}"/>
 </head>
 <body>
     <p>Para que se possa defender sistemas de ciber-criminosos é necessário pensar como um invasor e entender como os ataques funcionam. Considerando isso, a ideia é trazer conteúdo sobre diversos tópicos na área, do mais básico ao mais aprofundado.</p>
