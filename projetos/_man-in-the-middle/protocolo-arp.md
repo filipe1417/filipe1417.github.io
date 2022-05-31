@@ -32,16 +32,16 @@ Para que duas máquinas em uma rede Ethernet se comuniquem, é necessário que o
 <p>Quando o host A receber a resposta, a sua tabela ARP de endereços é atualizada. Sendo assim, para uma futura comunicação entre os dois hosts, não será necessário utilizar o ARP novamente, pois o endereço MAC de B agora estará associado ao seu endereço IP</p>
 
 > Exemplo de uma tabela ARP antes de realizar um ping para 150.165.37.4. 
-![tabelaARP.png](tabelaARP.png)
+![tabelaARP.png](/assets/imagens/arp-poisoning/tabelaARP.png)
 
 > Exemplo da tabela ARP após realizar o ping para 150.165.37.4. 
-![tabelaARP2.png](tabelaARP2.png)
+![tabelaARP2.png](/assets/imagens/arp-poisoning/tabelaARP2.png)
 
 Note que uma entrada foi adicionada - a associação entre os endereços IP e MAC do host alvo.
 Para acessar a tabela arp, na maioria das distribuições linux e windows, utilize o comando "arp -a".
 
 ## 1.1. Cabeçalho ARP
-![arpformat.png](arpformat.png)
+![arpformat.png](/assets/imagens/arp-poisoning/arpformat.png)
 
 ## 1.2. ARP request e Scapy
 O ARP request é feito pelo host que deseja enviar o pacote na rede, e para isso, precisa descobrir o MAC alvo.
@@ -49,7 +49,7 @@ O destino (broadcast) é levado no cabeçalho Ethernet, já o "alvo" do request 
 
 Na imagem abaixo, é possível ver através do wireshark como acontece quando um ARP request é feito.
 
-![wiresharkARP.png](wiresharkARP.png)
+![wiresharkARP.png](/assets/imagens/arp-poisoning/wiresharkARP.png)
 
 Alguns pontos importantes para criação de um pacote ARP request foram destacados.
 * Seta azul (primeira): É o destino broadcast, definido pelo Ethernet. 
@@ -190,7 +190,7 @@ resposta.show()
 De um lado temos o arp request (forjado através do scapy) e do outro a resposta recebida. 
 O pacote enviado também foi capturado pelo wireshark, abaixo é possível visualizar através dele.
 
-![arpRequest.png](arpRequest.png)
+![arpRequest.png](/assets/imagens/arp-poisoning/arpRequest.png)
 
 ## 1.3. ARP reply e Scapy
 
@@ -200,7 +200,7 @@ Observando um ARP reply pelo wireshark, é possível perceber algumas diferença
 - Não há campos vazios.
 - O código de operação agora é 2 (reply)
 
-![arpReply.png](arpReply.png)
+![arpReply.png](/assets/imagens/arp-poisoning/arpReply.png)
 
 ### Gratuitous ARP reply e Scapy
 
@@ -226,7 +226,7 @@ sendp(Ether()/ARP(pdst="150.165.37.4", hwdst="08:00:27:47:e2:e7", op=2), count=4
     </pre>
   </div>
 
-![gratuitousARPreply.png](gratuitousARPreply.png)
+![gratuitousARPreply.png](/assets/imagens/arp-poisoning/gratuitousARPreply.png)
 
 > No próximo exemplo, será forjado um ARP reply com valores falsos com o Scapy. Note que passo o endereço IP de outra máquina como origem. Além disso, o endereço MAC passado não existe.
 
@@ -241,7 +241,7 @@ sendp(Ether()/ARP(pdst="150.165.37.4", hwdst="08:00:27:47:e2:e7", psrc="150.165.
     </pre>
  </div>
 
-![gratuitousARPreplyFALSO.png](gratuitousARPreplyFALSO.png)
+![gratuitousARPreplyFALSO.png](/assets/imagens/arp-poisoning/gratuitousARPreplyFALSO.png)
 
 > Note que o host alvo não conseguirá se comunicar com o endereço 150.165.37.9, visto que o MAC adicionado à sua tabela ARP não existe. Eventualmente, uma nova consulta será feita por parte do host alvo e o cache será atualizado com valores reais.
 

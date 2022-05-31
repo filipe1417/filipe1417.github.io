@@ -30,7 +30,7 @@ parent: /analise-de-trafego
 
 O wireshark sempre nos dirá o protocolo da camada mais alta na coluna “protocol”.
 
-![Untitled](imagem.png)
+![Untitled](/assets/imagens/wireshark/imagem.png)
 
 No exemplo acima, o protocolo que aparece é TCP, mesmo que a porta de destino seja a porta 80 (normalmente, http). Isso também acontece no caso da porta de origem sendo 80.
 
@@ -46,7 +46,7 @@ Para isso, vamos acessar as opções de captura, no momento antes de escolher a 
 
 Detalhe importante, sempre que vc clicar em um campo dentro de um pacote, no canto inferior esquerdo, o wireshark irá dizer como vc pode filtrar a partir daquele campo.
 
-![Untitled](imagem1.png)
+![Untitled](/assets/imagens/wireshark/imagem1.png)
 
 No exemplo acima, ao clicar na flag tcp SYN, podemos visualizar no canto inferior esquerdo que podemos utilizar “tcp.flags.syn” para filtrar no Display filter.
 
@@ -91,7 +91,7 @@ Exemplos: arp, ip, udp, etc...
 
 Logo ao lado da Display filter, onde vc pode digitar um filtro manualmente, há um + onde se pode adicionar um filtro como botão. Isso permite que só seja necessário clicar no botão para aplicar o filtro. 
 
-![Untitled](imagem2.png)
+![Untitled](/assets/imagens/wireshark/imagem2.png)
 
 Note na imagem que os botões “TCP SYNs” e “TCP ERRORs” foram criados para facilitar caso queira filtrar por esses parâmetros.
 
@@ -110,7 +110,7 @@ Essas flags não são do TCP em si, mas sim do wireshark. Ao filtrar o tcp.analy
 
 Ao clicar com o botão direito em um dos pacotes, é possível acessar a aba “conversation filters”, isso permite filtrar somente os pacotes que fazem parte daquela comunicação. Ao fazer isso, não vou estar filtrando somente, por exemplo, TCP, mas também para que só seja mostrado os pacotes TCP daquela comunicação entre as duas portas.
 
-![Untitled](imagem3.png)
+![Untitled](/assets/imagens/wireshark/imagem3.png)
 
 Note que ao aplicar o conversation filter, de 2186 pacotes, só aparecem 51. Também é possível perceber que o filtro aplicado não é somente “tcp”, mas algo mais complexo que permite filtrar ainda mais. O conversation filter especifíca, por exemplo, que o que deve aparece na tela são os pacotes entre 2 determinados IPs e 2 determinadas portas.
 
@@ -118,7 +118,7 @@ Note que ao aplicar o conversation filter, de 2186 pacotes, só aparecem 51. Tam
 
 Exemplo: conexões TCP dentro da captura de pacotes que aconteceu.
 
-![Untitled](imagem4.png)
+![Untitled](/assets/imagens/wireshark/imagem4.png)
 
 <aside>
 💡 É possível aplicar um conversation filter através dessa janela clicando com o botão direito na comunicação e em “apply filter”.

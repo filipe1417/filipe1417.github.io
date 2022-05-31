@@ -47,7 +47,7 @@ Modificamos o nome e escolheremos o tipo “delta time”.
 
 Após isso, arrastaremos a linha para abaixo da “time”, assim as colunas ficarão uma do lado da outra.
 
-![Untitled](imagem5.png)
+![Untitled](/assets/imagens/wireshark/imagem5.png)
 
 Na imagem é possível ver como ficou organizado o sniffer.
 
@@ -71,7 +71,7 @@ Ao clicar no head com o botão direito - a faixa cinza onde estão todas as colu
 
 Para colorir um determinado filtro no wireshark, vamos em “View” e “Coloring Rules”. Alí podemos editar as regras existentes ou adicionar uma nova.
 
-![Untitled](imagem6.png)
+![Untitled](/assets/imagens/wireshark/imagem6.png)
 
 Adicionamos a cor verde ao filtro tcp.flags.syn==1. Dessa forma, sempre que houver um TCP com flag SYN setada, ele será verde. 
 
@@ -83,7 +83,7 @@ Na aba de preferências é possível modificar o layout do wireshark.
 
 O padrão é o primeiro, em formato de escada.
 
-![Untitled](imagem7.png)
+![Untitled](/assets/imagens/wireshark/imagem7.png)
 
 É interessante também utilizar a segunda opção.
 
