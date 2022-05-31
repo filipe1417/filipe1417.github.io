@@ -2,7 +2,6 @@
     display: inline-block !important;
     width: 100% !important;
     height: 100% !important;
-    transition: 0.2s;
 }
 
 .bloco span{
@@ -19,11 +18,11 @@
     border: 1px solid var(--bg-secondary);
 }
 
-.bloco:hover .descricao-card{
+.card:hover .descricao-card{
     color: var(--bg);
 }
 
-.bloco:hover .heading-card{
+.card:hover .heading-card{
     color: var(--bg);
 }
 
