@@ -1,7 +1,6 @@
 ---
 title: Análise de tráfego
-description: "Nesse módulo, serão abordadas a personalização de perfis, filtros e prática de análise de tráfego. Os conteúdos ficarão divididos entre três sub-módulos. 
-Vale ressaltar que o módulo de wireshark profiles é um tema à parte, não sendo necessário para o entendimento dos próximos."
+description: "Nesse tópico, serão compartilhados conteúdos sobre análise de tráfego utilizando diferentes ferramentas já conhecidas, assim como criando algumas."
 layout: post
 parent: /projetos
 ---
@@ -12,6 +11,7 @@ parent: /projetos
 </head>
 <body>
 <hr>
+<p>Aqui fica disponível uma descrição sobre o que é a análise de tráfego e sua importância. Talvez dentro de cada próximo conteúdo, também fique uma pequena descrição sobre a ferramenta.</p>
 <ul class ="horizontal-list">
     <li class="card">
         <a class="bloco" href="wireshark-profiles">
