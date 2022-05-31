@@ -46,7 +46,7 @@ A ideia principal de um ataque man in the middle utilizando ARP spoofing é faze
 
 Um host A deseja acessar um servidor web na internet. Um invasor sabe que para isso acontecer, os pacotes passarão pelo gateway. Também sabe que posteriormente, o gateway enviará pacotes em direção ao host A para que a comunicação aconteça. O invasor, então, utiliza o ARP spoofing para realizar um ataque MITM e intercepta a comunicação. O novo caminho lógico entre o host A e o gateway passará pela máquina do invasor, sendo assim, todo tráfego não criptografado será facilmente roubado pelo invasor.
 
-![MITM.jpg](MITM.jpg)
+![MITM.jpg](../imagens/MITM.jpg)
 
 #### Interceptando pacotes
 Nesse tipo de ataque MITM, o host invasor estará no meio (de forma lógica) da comunicação entre dois hosts na rede, e é o uso principal para o MITM. Normalmente, um dos hosts é o gateway.
