@@ -8,16 +8,15 @@ layout: post
 
 # Tabela de conteúdos
 1. [ARP poisoning](#arp-poisoning)
-    1. [Ataques](#ataques)
-    2. [Atacando com Scapy](#atacando-com-scapy)
+    1. [Ataques](#11-ataques)
+        1. [Isolando hosts](#111-isolando-hosts)
+        2. [MITM (Man in the middle)](#112-mitm-man-in-the-middle)
+    2. [Atacando com Scapy](#12-atacando-com-scapy)
 2. [Referências](#referências)
 
 ---
 
 # 1. ARP poisoning
-
-OBS para verificar: em algumas literaturas, arp spoofing é o mesmo de arp poisoning. Em outras, é diferente.
-Normalmente, o conceito de arp spoofing (quando aparece diferente de arp poisoning) é o mesmo de MAC spoofing.
 
 O ARP poisoning, ou ARP spoofing, é um perigo enorme para redes Ethernet. O ataque consiste em forjar gratuitous ARP replies para que um, dois ou mais hosts alvo atualizem o cache da tabela ARP com valores falsos. Os valores falsos enviados abrem brecha para ataques diferentes. 
 
@@ -26,7 +25,7 @@ No geral, o ARP spoofing é utilizado para ataques man in the middle.
 
 ## 1.1. Ataques
 
-### Isolando hosts
+### 1.1.1. Isolando hosts
 
 É possível evitar que hosts se comuniquem entre si em uma rede, assim como que consigam acessar redes exteriores ao gateway. Isso pode ser feito divulgando endereços MAC falsos para os hosts na rede.
 
@@ -38,7 +37,7 @@ Segue o mesmo princípio do tópico anterior, mas aqui o host isolado seria o pr
 Isso poderia ser feito falsificando os valores nas tabelas ARP de vários hosts na rede ou de algum específico. Note que como qualquer ataque que atinja uma quantidade grande de hosts, ou toda a rede, é bem barulhento. Sendo assim, é fácil visualizar que tem algo suspeito acontecendo.
 
 
-### MITM (Man in the middle)
+### 1.1.2. MITM (Man in the middle)
 Utilizando o man in the middle também é possível realizar os ataques do tópico "Isolando hosts".
 Diferente dos ataques anteriores, nossa máquina invasora estará no meio da comunicação, não somente falsicando correspondências do cache ARP sobre outros hosts na rede, mas participando ativamente para interceptação de informações.
 

@@ -1,6 +1,6 @@
 ---
 title: Análise de tráfego
-description: "Nesse tópico, serão compartilhados conteúdos sobre análise de tráfego utilizando diferentes ferramentas já conhecidas, assim como criando algumas."
+description: "Nesse tópico, serão compartilhados conteúdos sobre análise de tráfego em redes utilizando diferentes ferramentas já conhecidas, assim como criando algumas."
 layout: post
 parent: /projetos
 ---
@@ -10,8 +10,10 @@ parent: /projetos
      <link rel="stylesheet" href="/projetos/css_global_projetos/css.css">
 </head>
 <body>
-<hr>
-<p>Aqui fica disponível uma descrição sobre o que é a análise de tráfego e sua importância. Talvez dentro de cada próximo conteúdo, também fique uma pequena descrição sobre a ferramenta.</p>
+<p>A análise de trafego de redes é essencial para detecção de problemas em rede, assim como em que ponto eles estão ocorrendo. Problemas esses que podem variar de equipamentos defeituosos até atividades suspeitas. O uso de uma ferramenta de captura de pacotes também permite uma melhor visualização do funcionamento dos protocolos e serviços.</p>
+- O Wireshark, por exemplo, será utilizado diversas vezes durante o desenvolvimento e análise de ferramentas para testes de segurança em outros módulos desse projeto.
+
+<h2>Wireshark</h2>
 <ul class ="horizontal-list">
     <li class="card">
         <a class="bloco" href="wireshark-profiles">

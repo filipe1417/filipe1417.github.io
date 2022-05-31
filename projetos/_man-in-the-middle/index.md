@@ -10,8 +10,9 @@ parent: /projetos
      <link rel="stylesheet" href="/projetos/css_global_projetos/css.css">
 </head>
 <body>
-<p>Aqui, antes de começar a mostrar as técnicas, terá uma descrição geral sobre o tema. Nesse caso, será explicando o que é o man in the middle, pois ele estaria presente antes de todos os tópicos nessa lista. No caso sobre scanning, teria uma descrição sobre o scanning antes das técnicas. Detalhes, lembrar que posso utilizar blocos para separar as ténicas, como está agora, ou deixar essa página para aproveitar bem a descrição do assunto e deixar do lado esquerdo uma navbar
-com os temas.</p>
+<p>Um ataque Man in the middle consiste em um invasor posicionado logicamente no meio da comunicação entre duas pontas, normalmente interceptando os dados não encriptados no caminho.</p>
+- Note que é possível realizar um ataque MITM em diversos hosts simultaneamente, mas ainda assim, o invasor estará somente entre duas pontas - origem e destino dos pacotes e da comunicação naquele momento.
+
 <h2>ARP poisoning/spoofing</h2>
 <ul class ="horizontal-list">
     <li class="card">
@@ -25,7 +26,7 @@ com os temas.</p>
         <a class="bloco" href="arp-poisoning">
             <span class="heading-card">Poisoning</span>
             <hr>
-            <p class="descricao-card">O que é o envenenamento ARP e quais ataques ele permite.</p>
+            <p class="descricao-card">O que é o envenenamento ARP e como alcançar o MITM - entre outros ataques.</p>
         </a>
     </li>
 </ul>

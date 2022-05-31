@@ -28,21 +28,18 @@ parent: /analise-de-trafego
 
 ## Observações iniciais
 
-O wireshark sempre nos dirá o protocolo da camada mais alta na coluna “protocol”.
+O wireshark sempre nos mostratá o protocolo da camada mais alta na coluna “protocol”.
 
 ![Untitled](/assets/imagens/wireshark/imagem.png)
 
-No exemplo acima, o protocolo que aparece é TCP, mesmo que a porta de destino seja a porta 80 (normalmente, http). Isso também acontece no caso da porta de origem sendo 80.
+No exemplo acima, o protocolo que aparece é TCP, mesmo que a porta de destino seja a porta 80 (padrão para http). Isso também acontece no caso da porta de origem sendo 80.
 
-Nesse caso, isso acontece pois houve a comunicação TCP com a porta 80 mas nenhum payload HTTP foi enviado. Ou seja, ao filtrar por tcp, nós conseguimos ver tudo que aconteceu naquela porta através de tcp, desde o início da comunicação (vemos o handshake) até outros pacotes tcp que não contém payload http.
+Nesse caso, isso acontece pois houve a comunicação TCP com a porta 80 mas nenhum payload HTTP foi enviado. Ou seja, ao filtrar por tcp, nós conseguimos ver tudo que aconteceu naquela porta através de tcp, desde o início da comunicação (vemos o handshake) até outros pacotes tcp que não contém payload http. Sendo assim, pode ser interessante filtrar não pelo http, visualizando os pacotes que contém payload, mas sim pela porta tcp 80 (ou outra que esteja segurando o servidor http). 
 
-Pode ser interessante filtrar não pelo http, vendo os pacotes que contém payload, mas sim pela porta tcp 80 (ou outra que esteja segurando o servidor http). Isso pois pode ser importante visualizar o que está ocorrendo camada que sustenta aquela aplicação.
-
-## Capturando de forma intermitente
-
-Para isso, vamos acessar as opções de captura, no momento antes de escolher a interface.
+Isso é válido pois pode ser importante visualizar o que está ocorrendo na camada que sustenta aquela aplicação.
 
 ## Filtros
+Durante o uso deu uma ferramenta de análise de tráfego, uma grande quantidade de pacotes é capturada e é difícil realizar uma análise eficiente ao tentar analisar a captura como um todo. Sendo assim, os filtros permitem que seja especificado o que se está procurando na captura.
 
 Detalhe importante, sempre que vc clicar em um campo dentro de um pacote, no canto inferior esquerdo, o wireshark irá dizer como vc pode filtrar a partir daquele campo.
 
@@ -54,11 +51,9 @@ Note que o “1” seria equivalente ao set, então para filtrar somente pacotes
 
 ### Display filters vs Capture filters
 
-Os display filters são filtros que são aplicados após os pacotes terem sido capturados, ou seja, vc pode modificar como e quanto quiser. É possível adicionar um filtro, remover, adicionar novamente, retirar todos os filtros... e ainda assim a captura estará lá, completa. Os display filters simplesmente estão filtrando o que vai aparecer no wireshark, mas as capturas foram feitas e é possível analisar sem filtro caso queira.
+Os display filters são filtros que são aplicados após os pacotes terem sido capturados, ou seja, vc pode modificar como e quanto quiser. É possível adicionar um filtro, remover, adicionar novamente, retirar todos os filtros... e ainda assim a captura estará lá, completa. Os display filters simplesmente estão filtrando quais pacotes devem aparecer naquele momento, mas os outros pacotes também foram capturados e é possível visualizá-los quando quiser.
 
-Os capture filters são aplicados antes de começar a capturar pacotes, ao escolher a interface de rede. Ao definir um capture filter, só serão capturados pacotes que seguem aquele filtro definido. O padrão é capturar tudo.
-
-Uma boa prática, de começo, é capturar tudo (não definir capture filter) e modificar somente os display filters.
+Os capture filters são aplicados antes de começar a capturar pacotes, ao escolher a interface de rede, e não podem ser modificados durante a captura. Ao definir um capture filter, só serão capturados pacotes que seguem aquele filtro definido. O padrão é capturar tudo.
 
 **Os filtros mostrados daqui em diante serão display filters.**
 
@@ -78,18 +73,17 @@ Utilizando o CIDR (por exemplo, /24) é possível também filtrar por somente or
 
 ### Filtrando por protocolo
 
-Para filtrar diretamente por protocolo é bem simples, simplesmente digitar qual protocolo quer dentro do input do Display filter.
+Para filtrar diretamente por protocolo, é necessário simplesmente digitar qual protocolo quer dentro do input do Display filter.
 
 Exemplos: arp, ip, udp, etc...
 
 <aside>
-💡 Podemos acessar alguns filtros exemplos ao acessar a aba “Display filters” dentro de “Analyze”.
-
+💡 É possível acessar alguns filtros de referência ao acessar a aba “Display filters” dentro de “Analyze”.
 </aside>
 
 ### Filtros como botões
 
-Logo ao lado da Display filter, onde vc pode digitar um filtro manualmente, há um + onde se pode adicionar um filtro como botão. Isso permite que só seja necessário clicar no botão para aplicar o filtro. 
+Logo ao lado do input de Display filter, há um "+" onde se pode adicionar um filtro como botão. Isso permite que só seja necessário clicar no botão para aplicar o filtro. 
 
 ![Untitled](/assets/imagens/wireshark/imagem2.png)
 
@@ -99,7 +93,6 @@ O círculo vermelho marca o “+”, onde é possível adicionar novos botões. 
 
 <aside>
 💡 Ao criar um filtro com nome que contém //, vc estará criando um menu dropdown. Por exemplo: TCP//Reset, criará um botão TCP que contém Reset dentro.
-
 </aside>
 
 ### TCP analysis
@@ -108,30 +101,28 @@ Essas flags não são do TCP em si, mas sim do wireshark. Ao filtrar o tcp.analy
 
 ### Conversation filters
 
-Ao clicar com o botão direito em um dos pacotes, é possível acessar a aba “conversation filters”, isso permite filtrar somente os pacotes que fazem parte daquela comunicação. Ao fazer isso, não vou estar filtrando somente, por exemplo, TCP, mas também para que só seja mostrado os pacotes TCP daquela comunicação entre as duas portas.
+Ao clicar com o botão direito em um dos pacotes, é possível acessar a aba “conversation filters”, que permite filtrar somente os pacotes que fazem parte daquela "conversa". Ao fazer isso, estarão sendo filtrados os pacotes TCP que fazem parte daquela comunicação entre as duas portas.
 
 ![Untitled](/assets/imagens/wireshark/imagem3.png)
 
-Note que ao aplicar o conversation filter, de 2186 pacotes, só aparecem 51. Também é possível perceber que o filtro aplicado não é somente “tcp”, mas algo mais complexo que permite filtrar ainda mais. O conversation filter especifíca, por exemplo, que o que deve aparece na tela são os pacotes entre 2 determinados IPs e 2 determinadas portas.
+Note que ao aplicar o conversation filter, de 2186 pacotes, só aparecem 51. Também é possível perceber que o filtro aplicado não é somente “tcp”, mas algo mais complexo que permite filtrar além do protocolo. O conversation filter especifíca, por exemplo, que o que deve ser mostrado na tela são os pacotes da comunicação entre 2 determinados IPs e 2 determinadas portas.
 
 É possível analisar quais foram as “conversations” que aconteceram durante a análise. É possível acessar na aba “conversations” dentro de “statistics”.
-
-Exemplo: conexões TCP dentro da captura de pacotes que aconteceu.
+Exemplo: conexões TCP dentro daquela sessão de captura.
 
 ![Untitled](/assets/imagens/wireshark/imagem4.png)
 
 <aside>
 💡 É possível aplicar um conversation filter através dessa janela clicando com o botão direito na comunicação e em “apply filter”.
-
 </aside>
 
 ### Preparar e aplicar filtros
 
-É possível aplicar filtros ao clicar com botão direito em um campo do pacote e clicar em apply filter. Ainda assim, é possível fazer o mesmo com prepare filter.
+É possível aplicar filtros ao clicar com botão direito em um campo do pacote e em apply filter. Ainda assim, é possível fazer o mesmo com prepare filter.
 
-A diferença é que o prepare filter simplesmente cria o filtro e deixar dentro do input display filter, no topo do wireshark (ele não aplica). Assim é possível modificar como quiser antes de aplicar.
+A diferença é que o prepare filter simplesmente cria o filtro e mantém dentro do input display filter, no topo do wireshark (ele não aplica). Assim é possível modificar como quiser antes de aplicar.
 
-O apply filter adiciona ao input do display e automaticamente aplica. Sendo assim, é possível editá-lo normalmente mas ele ja terá sido aplicado.
+O apply filter adiciona ao input do display e logo em seguida aplica. Ainda é possível editá-lo, mas ele ja terá sido aplicado.
 
 ### Operadores para combinar filtros
 
@@ -144,13 +135,15 @@ O apply filter adiciona ao input do display e automaticamente aplica. Sendo assi
 - “>” ou “gt”
 - “<” ou “lt” - (LT em minúsculo)
 
-Exemplo: ip.addr eq 192.168.1.1 && tcp
+**Exemplo:**
+
+ip.addr eq 192.168.1.1 && tcp
 
 Mostra todas os pacotes tcp, entrando ou saíndo do endereço IP 192.168.1.1
 
-Exemplos com contexto:
+**Exemplos com contexto:**
 
-Alguns protocolos foram analisados e “arp” parece “saudável”. Sendo assim, vc quer excluir arp de ser mostrado através da filtragem.
+Alguns protocolos foram analisados e ARP parece “saudável”. Sendo assim, pode ser melhor aplicar um filtro para excluir as "conversas" ARP da saída.
 
 Isso seria feito da seguinte forma:
 
@@ -160,15 +153,14 @@ Também poderia ser feito com mais de um, exemplo:
 
 !(arp or stp)
 
-Outro exemplo seria não mostrar os pacotes com destino Broadcast:
+**Não mostrar os pacotes com destino Broadcast:**
 
-eth.dst == ff:ff:ff:ff:ff:ff 
+!(eth.dst == ff:ff:ff:ff:ff:ff) 
 
-(eth = ethernet)
+(eth - Ethernet)
 
 <aside>
 💡 Também é possível aplicar um campo do protocolo como filtro, clicando com botão direito e “apply as filter”.
-
 </aside>
 
 ### Filtros especiais
@@ -181,14 +173,14 @@ obs: contains compara a string exatamente como foi escrita, o matches não consi
 
 Mais alguns exemplos com matches ou contains:
 
-Ex: frame matches admin 
+**Ex: frame matches admin** 
 
-note que o contains poderia substituir o matches, mas palavras “admin” com alguma letra maiúscula não apareceriam.
+Note que nesse caso o contains poderia substituir o matches, mas frames contendo palavras “admin” com alguma letra maiúscula não apareceriam.
 
-Ex2: frame contains GET
+**Ex2: frame contains GET**
 
 ### Reduzindo e exportando um pcap com filtros
 
-Também podemos reduzir o tamanho do pcap (Arquivo wireshark) sendo analisado. Para isso, definimos um display filter e após isso vamos em “export specified packets” dentro da aba “File”. Além disso, é possível especificar um “range” de pacotes para serem exportados dentro da própria janela de exportação.
+Também podemos reduzir o tamanho do pcap (arquivo de captura de pacotes) sendo analisado. Para isso, definimos um display filter e após isso “export specified packets” dentro da aba “File”. Além disso, é possível especificar um “range” de pacotes para serem exportados dentro da própria janela de exportação.
 
 ---
