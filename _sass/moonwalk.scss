@@ -81,6 +81,7 @@ html {
     --texto-card: var(--bg);
     --heading-card: var(--bg);
     --heading-navbar: #55a5d9;
+    --bg-barra-lateral: var(--text)
 }
 // -------------- THEME SWITCHER -------------- //
 @mixin dark-appearance {
@@ -97,7 +98,8 @@ html {
       --bg-card: #4A5563;
       --texto-card: var(--text);
       --heading-card: var(--headings);
-      --heading-navbar: #363D9E;
+      --heading-navbar: #29648C;
+      --bg-barra-lateral: #fcfcfc;
   };
 }
 html[data-theme="dark"] { @include dark-appearance; }
