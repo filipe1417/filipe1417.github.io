@@ -10,7 +10,7 @@ parent: /projetos
      <link rel="stylesheet" href="/projetos/css_global_projetos/css.css">
 </head>
 <body>
-<p>A análise de trafego de redes é essencial para detecção de problemas em rede, assim como em que ponto eles estão ocorrendo. Problemas esses que podem variar de equipamentos defeituosos até atividades suspeitas. O uso de uma ferramenta de captura de pacotes também permite uma melhor visualização do funcionamento dos protocolos e serviços.</p>
+<p>A análise de trafégo de redes é essencial para detecção de problemas em rede e    em que ponto eles estão ocorrendo. Problemas esses que podem variar de equipamentos defeituosos até atividades suspeitas. O uso de uma ferramenta de captura de pacotes também permite uma melhor visualização do funcionamento dos protocolos e serviços.</p>
 - O Wireshark, por exemplo, será utilizado diversas vezes durante o desenvolvimento e análise de ferramentas para testes de segurança em outros módulos desse projeto.
 
 <h2>Wireshark</h2>
