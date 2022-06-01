@@ -3,7 +3,30 @@
         {%- include head.html -%}
   <body style="background-color:var(--bg-secondary)">
     <main class="page-content" aria-label="Content">
-      <div class="w" style="background-color: var(--bg)">
+      <nav class="barra-lateral">
+         <h3 class="titulo-navbar">{{ site.data.lista-de-projetos.docs_list_title }}</h3>
+        {% if site.data.lista-de-projetos.docs[0] %}
+          {% for item in site.data.lista-de-projetos.docs %}
+              <h3>{{ item.titulo }}</h3>
+              {% if item.subdiretorios[0] %}
+              <ul>
+                {% for entry in item.subdiretorios %}
+                <h4>{{ entry.pagina }}</h4>
+                  {% if entry.subsubdiretorios[0] %}
+                    <ul>
+                     {% for subentry in entry.subsubdiretorios %}
+                     <li><a href="{{ subentry.url }}">{{ subentry.pagina }}</a></li>
+                     {% endfor %}
+                    </ul>
+                  {% endif %}
+                </li>
+                {% endfor %}
+              </ul>
+               {% endif %}
+             {% endfor %}
+          {% endif %}
+      </nav>
+      <div class="wPost" style="background-color: var(--bg)">
         {{ content }}
         {% if site.theme_config.appearance_toggle %}
           {% include toggle_theme_button.html %}

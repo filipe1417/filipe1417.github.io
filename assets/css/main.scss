@@ -8,3 +8,48 @@
 pre {
     white-space: pre-wrap;
 }
+
+.barra-lateral{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	height: auto;
+	width: 300px;
+	background-color: var(--text)
+}
+
+.barra-lateral h3{
+	margin-left: 15px;
+	margin-bottom: -25px;
+	font-weight: 300;
+	color: var(--bg)
+}
+
+.barra-lateral h4{
+	margin-bottom: -10px;
+	font-weight: 300;
+	color: var(--bg)
+
+}
+
+.barra-lateral a{
+	color: var(--bg-secondary)
+}
+
+.titulo-navbar{
+	font-size: 22px;
+	font-weight: bold;
+	color: var(--heading-navbar) !important;
+}
+
+@media only screen and (max-width: 1124px) {
+	  .barra-lateral {
+	  	display: none;
+	}
+	  .wPost {
+		padding: 4em 2em;
+		margin: 0 auto;	
+	}
+
+}

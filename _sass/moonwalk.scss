@@ -31,10 +31,15 @@ p { margin: 1em 0; }
 
 li { margin: 0.4em 0; }
 
-.w {
+.w, .wPost {
   max-width: 720px;
   margin: 0 auto;
   padding: 4em 2em;
+}
+
+.wPost {
+  padding: 1.618em 3.236em;
+  margin-left: 300px;
 }
 
 table, th, td {
@@ -75,6 +80,7 @@ html {
     --bg-card: #828282;
     --texto-card: var(--bg);
     --heading-card: var(--bg);
+    --heading-navbar: #55a5d9;
 }
 // -------------- THEME SWITCHER -------------- //
 @mixin dark-appearance {
@@ -91,6 +97,7 @@ html {
       --bg-card: #4A5563;
       --texto-card: var(--text);
       --heading-card: var(--headings);
+      --heading-navbar: #363D9E;
   };
 }
 html[data-theme="dark"] { @include dark-appearance; }
