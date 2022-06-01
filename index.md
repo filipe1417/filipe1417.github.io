@@ -9,7 +9,7 @@ layout: home
     <link rel="canonical" href="{{ site.url }}"/>
 </head>
 <body>
-    <p>Para que se possa defender sistemas de ciber-criminosos é necessário pensar como um invasor e entender como os ataques funcionam. Considerando isso, a ideia é trazer conteúdo sobre diversos tópicos na área, do mais básico ao mais aprofundado.</p>
+    <p>Para que se possa defender sistemas e aplicações de ataques de ciber-criminosos é necessário pensar como um invasor e entender como os ataques funcionam. Considerando isso, a ideia é trazer conteúdo sobre diversos tópicos na área, do mais básico ao mais aprofundado.</p>
     <ul class="horizontal-list">
     <li class="bloco">
 	    <a class="card" href="/projetos">Projetos</a>
