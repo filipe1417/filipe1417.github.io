@@ -1,14 +1,9 @@
 ---
 title: Wireshark filtros
-description: "Serão apresentados os tipos de filtros presentes no wireshak, tanto seu funcionamento como suas aplicações. Além disso, será possível perceber a importância de utilizar filtros durante a análise de tráfego em redes."
+description: "Serão apresentados os tipos de filtros presentes no wireshark, tanto seu funcionamento como suas aplicações. Além disso, será possível perceber a importância de utilizar filtros durante a análise de tráfego em redes."
 layout: post
 parent: /analise-de-trafego
 ---
-
-<html>
-<head>
-</head>
-</html>
 
 ## Tabela de conteúdos
 1. [Observações iniciais](#observações-iniciais)
@@ -28,20 +23,20 @@ parent: /analise-de-trafego
 
 ## Observações iniciais
 
-O wireshark sempre nos mostratá o protocolo da camada mais alta na coluna “protocol”.
+O wireshark sempre nos mostrará o protocolo da camada mais alta na coluna “Protocol”.
 
 ![Untitled](/assets/imagens/wireshark/imagem.png)
 
 No exemplo acima, o protocolo que aparece é TCP, mesmo que a porta de destino seja a porta 80 (padrão para http). Isso também acontece no caso da porta de origem sendo 80.
 
-Nesse caso, isso acontece pois houve a comunicação TCP com a porta 80 mas nenhum payload HTTP foi enviado. Ou seja, ao filtrar por tcp, nós conseguimos ver tudo que aconteceu naquela porta através de tcp, desde o início da comunicação (vemos o handshake) até outros pacotes tcp que não contém payload http. Sendo assim, pode ser interessante filtrar não pelo http, visualizando os pacotes que contém payload, mas sim pela porta tcp 80 (ou outra que esteja segurando o servidor http). 
+Nesse caso, isso acontece pois houve a comunicação TCP com a porta 80 mas nenhum payload HTTP foi enviado. Assim, ao filtrar por TCP, é possível perceber tudo que aconteceu naquela porta através de TCP, desde o início da comunicação (vê-se o handshake) até outros pacotes TCP que não contém payload HTTP. Dessa forma, pode ser interessante filtrar não pelo HTTP, visualizando somente os pacotes que contêm payload, mas sim pela porta TCP 80 (ou outra que esteja segurando o servidor HTTP). 
 
 Isso é válido pois pode ser importante visualizar o que está ocorrendo na camada que sustenta aquela aplicação.
 
 ## Filtros
-Durante o uso deu uma ferramenta de análise de tráfego, uma grande quantidade de pacotes é capturada e é difícil realizar uma análise eficiente ao tentar analisar a captura como um todo. Sendo assim, os filtros permitem que seja especificado o que se está procurando na captura.
+Durante o uso de uma ferramenta de análise de tráfego, uma grande quantidade de pacotes é capturada e é difícil realizar uma análise eficiente ao tentar analisar a captura como um todo. Sendo assim, os filtros permitem que seja especificado o que se está procurando na captura.
 
-Detalhe importante, sempre que vc clicar em um campo dentro de um pacote, no canto inferior esquerdo, o wireshark irá dizer como vc pode filtrar a partir daquele campo.
+Detalhe importante, sempre que clicar em um campo dentro de um pacote, no canto inferior esquerdo, o wireshark mostrará como se pode filtrar a partir daquele campo.
 
 ![Untitled](/assets/imagens/wireshark/imagem1.png)
 
@@ -51,7 +46,7 @@ Note que o “1” seria equivalente ao set, então para filtrar somente pacotes
 
 ### Display filters vs Capture filters
 
-Os display filters são filtros que são aplicados após os pacotes terem sido capturados, ou seja, vc pode modificar como e quanto quiser. É possível adicionar um filtro, remover, adicionar novamente, retirar todos os filtros... e ainda assim a captura estará lá, completa. Os display filters simplesmente estão filtrando quais pacotes devem aparecer naquele momento, mas os outros pacotes também foram capturados e é possível visualizá-los quando quiser.
+Os display filters são filtros que são aplicados após os pacotes terem sido capturados, assim, pode-se modificar como e quanto quiser. É possível adicionar um filtro, remover, adicionar novamente, retirar todos os filtros... e ainda assim a captura estará lá, completa. Os display filters simplesmente estão filtrando quais pacotes devem aparecer naquele momento, mas os outros pacotes também foram capturados e é possível visualizá-los quando quiser.
 
 Os capture filters são aplicados antes de começar a capturar pacotes, ao escolher a interface de rede, e não podem ser modificados durante a captura. Ao definir um capture filter, só serão capturados pacotes que seguem aquele filtro definido. O padrão é capturar tudo.
 
@@ -92,7 +87,7 @@ Note na imagem que os botões “TCP SYNs” e “TCP ERRORs” foram criados pa
 O círculo vermelho marca o “+”, onde é possível adicionar novos botões. Nesse caso, é difícil ver o botão pois está da mesma cor que o fundo do wireshark.
 
 <aside>
-💡 Ao criar um filtro com nome que contém //, vc estará criando um menu dropdown. Por exemplo: TCP//Reset, criará um botão TCP que contém Reset dentro.
+💡 Ao criar um filtro com nome que contém //, estará sendo criado um menu dropdown. Por exemplo: TCP//Reset, criará um botão TCP que contém o botão Reset dentro.
 </aside>
 
 ### TCP analysis
