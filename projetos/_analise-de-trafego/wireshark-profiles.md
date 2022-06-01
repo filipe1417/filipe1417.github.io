@@ -23,37 +23,35 @@ Para criar um novo perfil, deve-se clicar com o botão direito em profiles (cant
 
 ### Coluna Time e o tempo
 
-A coluna “time” no wireshark está marcando o tempo de chegada dos pacotes a partir do momento que o primeiro pacote foi capturado. Sendo assim, o primeira começa em 0.000... e servirá de referência para marcação de tempo de todos os outros pacotes.
+A coluna “time” no wireshark está marcando o tempo de chegada dos pacotes a partir do momento que o primeiro pacote foi capturado. Sendo assim, a primeira captura foi realizada em 0.000... e servirá de referência para marcação de tempo de todos os outros pacotes.
 
 É possível mudar para que o tempo agora seja em relação ao pacote anterior, e não ao primeiro. Assim é mais fácil de perceber problemas de lentidão na rede.
 
-Para isso, vamos em View, nas opções no menu superior do wireshark. Após isso, acharemos “Time Display Format” e escolheremos “Seconds since previous displayed packet”. - Assim, 3 segundos não significa mais que aquele pacote apareceu 3 segundos após o primeiro, e sim 3 segundos após o anterior.
-
-Como a ideia é adicionar um nova coluna que faz isso, iremos manter na marcação de tempo em relação ao inicio da captura.
+Para isso, vamos em View, nas opções no menu superior do wireshark. Após isso, acharemos “Time Display Format” e escolheremos “Seconds since previous displayed packet”. - Assim, a referência para o tempo será o pacote anterior, não o primeiro. A ideia é adicioanr uma nova coluna para essa marcação de tempo, mantendo a anterior.
 
 ### Adicionar nova coluna tempo
 
 Para adicionar uma nova coluna, abriremos as preferências e clicaremos no + dentro da aba de colunas.
 
-Modificamos o nome e escolheremos o tipo “delta time”.
+Modificamos o nome e escolheremos o tipo "Delta time”.
 
-Após isso, arrastaremos a linha para abaixo da “time”, assim as colunas ficarão uma do lado da outra.
+Após isso, arrastaremos a linha para abaixo da “Time”, assim as colunas ficarão uma do lado da outra.
 
 ![Untitled](/assets/imagens/wireshark/imagem5.png)
 
 Na imagem é possível ver como ficaram organizadas as colunas de tempo.
 
-A coluna time indicando o tempo em relação à primeira captura, já a coluna Delta indicando o tempo em relação à captura anterior.
+A coluna "Time" indicando o tempo em relação à primeira captura, já a coluna "Delta" indicando o tempo em relação à captura anterior.
 
 Obs: sempre que configurar o tempo através do menu “View”, a coluna Time será a afetada.
 
 ### Adicionar coluna através de campos nos protocolos
 
-É interessante adicionar uma coluna sempre que um determinado campo for constatemente analisado, assim, não é necessário buscar aquele campo dentro dos protocolos sempre que precisar.
+É interessante adicionar uma coluna sempre que um determinado campo for constantemente analisado, assim, não é necessário buscar aquele campo dentro dos protocolos sempre que precisar.
 
 Para adicionar, por exemplo, o TTL como uma coluna, abriremos um pacote, clicaremos com botão direito no campo e em “apply to column”.
 
-Também é possível editar o nome da coluna ao clicar com botão direito. Assim mudaremos de Time to Live para TTL, diminuindo o espaço ocupado pela coluna e ainda conseguindo entender o que aquela coluna indica.
+Também é possível editar o nome da coluna ao clicar com botão direito. Assim mudaremos de "Time to Live" para "TTL", diminuindo o espaço ocupado pela coluna e ainda conseguindo entender o que aquela coluna indica.
 
 ### Ativar e desativar colunas
 
@@ -61,7 +59,7 @@ Ao clicar no head com o botão direito - a faixa cinza onde estão todas as colu
 
 ### Cores no tráfego
 
-Para colorir um determinado filtro no wireshark, vamos em “View” e “Coloring Rules”. Alí podemos editar as regras existentes ou adicionar uma nova.
+Para colorir um determinado filtro no wireshark, vamos em “View” e “Coloring Rules”. Alí é possível editar as regras existentes ou adicionar uma nova.
 
 ![Untitled](/assets/imagens/wireshark/imagem6.png)
 
