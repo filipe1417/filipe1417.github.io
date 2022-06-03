@@ -13,7 +13,7 @@
               {% if item.subdiretorios[0] %}
               <ul class="nopadding dropdown">
                 {% for entry in item.subdiretorios %}
-                <li><a value="{{ entry.pagina }}" class="dropdown-btn"><i class="fa-solid fa-circle-chevron-down"></i> {{ entry.pagina }}</a>
+                <li><a value="{{ entry.pagina }}" class="dropdown-btn"><span class="material-icons" style="float:left; font-size: 30px;margin-top: -5px;">arrow_drop_down</span>{{ entry.pagina }}</a>
                   {% if entry.subsubdiretorios[0] %}
                     <ul class="dropdown-container">
                      {% for subentry in entry.subsubdiretorios %}
