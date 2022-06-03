@@ -4,16 +4,18 @@
   <body style="background-color:var(--bg-secondary)">
     <main class="page-content" aria-label="Content">
       <nav class="barra-lateral">
-         <h3 class="titulo-navbar">{{ site.data.lista-de-projetos.docs_list_title }}</h3>
+        <div class="div-titulo-navbar">
+         <h2 class="titulo-navbar">{{ site.data.lista-de-projetos.docs_list_title }}</h2>
         {% if site.data.lista-de-projetos.docs[0] %}
           {% for item in site.data.lista-de-projetos.docs %}
-              <h3>{{ item.titulo }}</h3>
+        </div>  
+        <a class="titulo-topico" href="{{ item.url }}">{{ item.titulo }}</a>
               {% if item.subdiretorios[0] %}
-              <ul>
+              <ul class="nopadding dropdown">
                 {% for entry in item.subdiretorios %}
-                <h4>{{ entry.pagina }}</h4>
+                <li><a value="{{ entry.pagina }}" class="dropdown-btn"><i class="fa-solid fa-circle-chevron-down"></i> {{ entry.pagina }}</a>
                   {% if entry.subsubdiretorios[0] %}
-                    <ul>
+                    <ul class="dropdown-container">
                      {% for subentry in entry.subsubdiretorios %}
                      <li><a href="{{ subentry.url }}">{{ subentry.pagina }}</a></li>
                      {% endfor %}
@@ -41,5 +43,38 @@
         <script async defer src="https://sdk.soopr.co/soopr.js"></script>
       {%- endif -%}
     {%- endif -%}
+        <script>
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+            var menus = [];
+
+
+            for (i = 0; i < dropdown.length; i++) {
+                if (window.localStorage.getItem(dropdown[i].getAttribute('value')+"dropdown") == "true"){
+                
+                    dropdown[i].classList.toggle("active");
+                    var dropdownContent2 = dropdown[i].nextElementSibling;
+                    dropdownContent2.style.display = "block";
+
+                }
+                dropdown[i].addEventListener("click", function(event) {
+                   
+                    this.classList.toggle("active");
+                    console.log(this);
+                    var dropdownContent = this.nextElementSibling;
+                    if (dropdownContent.style.display === "block") {
+
+                        localStorage.setItem(event.target.getAttribute('value') + "dropdown", false);
+                        dropdownContent.style.display = "none";
+                    } else {
+                        dropdownContent.style.display = "block";
+                        localStorage.setItem(event.target.getAttribute('value') + "dropdown", true);
+                    }
+                });
+            }
+
+         
+
+        </script>
   </body>
 </html>

@@ -6,7 +6,7 @@ html { height: 100%; }
 body {
   font-family:  "Inter", -apple-system, "avenir next", avenir, roboto, noto, ubuntu, "helvetica neue", helvetica, sans-serif;
   font-size: 1.0rem;
-  line-height: 2;
+  line-height: 24px;
   margin: 0;
   min-height: 100%;
 }
@@ -80,7 +80,7 @@ html {
     --bg-card: #828282;
     --texto-card: var(--bg);
     --heading-card: var(--bg);
-    --heading-navbar: #55a5d9;
+    --heading-navbar: #74c0fc;
     --bg-barra-lateral: var(--text)
 }
 // -------------- THEME SWITCHER -------------- //
@@ -192,9 +192,6 @@ p code, li code {
   padding: 0.2rem;
   color: var(--code-text);
   font-weight: bold;
-}
-.post-title {
-  margin-bottom:-1.5rem;
 }
 .project-title {
   margin-bottom: 0.8rem;

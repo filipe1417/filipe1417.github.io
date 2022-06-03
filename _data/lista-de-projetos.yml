@@ -2,6 +2,7 @@ docs_list_title: Lista de projetos
 docs:
   
 - titulo: Análise de tráfego
+  url: /analise-de-trafego/
   subdiretorios:
     - pagina: Wireshark
       subsubdiretorios:
@@ -10,6 +11,7 @@ docs:
         - pagina: Profiles
           url: /analise-de-trafego/wireshark-profiles
 - titulo: Man in the middle
+  url: /man-in-the-middle/
   subdiretorios:
     - pagina: ARP poisoning
       subsubdiretorios:

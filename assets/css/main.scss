@@ -20,27 +20,78 @@ pre {
 }
 
 .barra-lateral h3{
-	margin-left: 15px;
-	margin-bottom: -25px;
+    margin-left: 15px;
 	font-weight: 300;
-	color: var(--bg)
+	color: var(--bg);
+    margin-bottom: -7px;
 }
 
 .barra-lateral h4{
-	margin-bottom: -10px;
 	font-weight: 300;
-	color: var(--bg)
-
+	color: var(--bg);
+    margin-bottom: -5px;
 }
 
+.barra-lateral li{
+    list-style: none;
+}
 .barra-lateral a{
-	color: var(--bg-secondary)
+	color: var(--bg-secondary);
+    padding-left: 15px;
+    text-decoration: none;
 }
 
+.titulo-topico{
+    font-size: 18px;
+    color: var(--heading-navbar) !important;
+    font-weight: bold;
+}
+
+.titulo-topico:hover{
+    font-size: 20px;
+}
+
+.div-titulo-navbar{
+    background: var(--heading-navbar);
+    text-align: center;
+    display: block;
+    padding: 1px;
+    margin-bottom: 20px;
+}
 .titulo-navbar{
 	font-size: 22px;
-	font-weight: bold;
-	color: var(--heading-navbar) !important;
+	color: var(--text);
+    padding: 10px 0;
+    padding: 4px 6px;
+}
+
+.dropdown-btn{
+    background: var(--bg-barra-lateral);
+    color: var(--bg);
+    font-size: 16px;
+    margin-top: 15px;
+    border: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown{
+}
+.active{
+    color: var(--text) !important;
+    background: var(--heading-navbar);
+}
+   
+.nopadding {
+    padding: 0;
+}
+
+.dropdown-btn:hover{
+    background: var(--heading-navbar);
+    color: var(--text);
+}
+.dropdown-container{
+    display: none;
 }
 
 @media only screen and (max-device-width: 1124px) {
