@@ -104,3 +104,24 @@ pre {
 	}
 
 }
+
+@media print {
+    #navbar {
+        display: none;
+    }
+    
+    .wPost{
+        margin: auto;
+    }
+
+
+    #imagem-tema{
+        display:none !important;
+    }
+
+    img {
+        page-break-inside:avoid
+
+    }
+}
+

@@ -3,7 +3,7 @@
         {%- include head.html -%}
   <body style="background-color:var(--bg-secondary)">
     <main class="page-content" aria-label="Content">
-      <nav class="barra-lateral">
+      <nav class="barra-lateral" id="navbar">
         <div class="div-titulo-navbar">
          <h2 class="titulo-navbar">{{ site.data.lista-de-projetos.docs_list_title }}</h2>
         {% if site.data.lista-de-projetos.docs[0] %}
@@ -28,7 +28,7 @@
              {% endfor %}
           {% endif %}
       </nav>
-      <div class="wPost" style="background-color: var(--bg)">
+      <div class="wPost" style="background-color: var(--bg)" id="">
         {{ content }}
         {% if site.theme_config.appearance_toggle %}
           {% include toggle_theme_button.html %}
