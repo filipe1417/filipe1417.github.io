@@ -3,7 +3,7 @@ title: Análise de tráfego
 description: "Nesse tópico, serão compartilhados conteúdos sobre análise de tráfego em redes utilizando diferentes ferramentas já conhecidas, assim como criando algumas."
 layout: post
 index: true
-parent: /projetos
+parent: /
 lesson: 0
 ---
 

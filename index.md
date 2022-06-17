@@ -1,23 +1,39 @@
 ---
+description: Lista com projetos e conteúdos sobre cibersegurança.
 layout: home
 ---
-
-<html>
 <head>
 	<meta charset="utf-8">
-    <link rel="stylesheet" href="css.css">
-    <link rel="canonical" href="{{ site.url }}"/>
 </head>
-<body>
-    <p>Para que se possa defender sistemas e aplicações de ataques de ciber-criminosos é necessário pensar como um invasor e entender como os ataques funcionam. Considerando isso, a ideia é trazer conteúdo sobre diversos tópicos na área, do mais básico ao mais aprofundado.</p>
-    <ul class="horizontal-list">
-    <li class="bloco">
-	    <a class="card" href="/projetos">Projetos</a>
-    </li>
-    <li class="bloco">
-		<a class="card" href="https://github.com/filipe1417/filipe1417.github.io">Acrescente conteúdo</a>
-    </li>
-    </ul>
-</body>
-</html>
+<p>Os conteúdos estão dividos em coleções. Cada coleção contém um conjunto de módulos sobre determinados temas. Abaixo do nome de cada coleção estão os conteúdos existentes até o momento.</p>
+<div class="grid-container">
 
+    <div class="bloco">
+        <a class="" href="/analise-de-trafego">
+            <h2>Análise de tráfego</h2>
+            <ul>
+                <li>Wireshark</li>
+            </ul>
+        </a>
+    </div>
+    <div class="bloco">
+        <a href="/man-in-the-middle">
+        <div>
+            <h2>Man in the middle</h2>
+            <ul>
+                <li>ARP poisoning/spoofing</li>
+            </ul>
+        </div>
+        </a>
+    </div>
+    <div class="bloco">
+        <a href="https://github.com/filipe1417/python-portscan-rapido">
+        <div>
+            <h2>Scanning</h2>
+            <ul>
+                <li>Portscan em python</li>
+            </ul>
+        </div>
+        </a>
+    </div>
+</div>

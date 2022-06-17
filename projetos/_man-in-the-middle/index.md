@@ -3,7 +3,7 @@ title: Man in the middle
 description: "Existem diversas técnicas que permitem a execução de um Man in the middle. Alguns tipos serão abordados nesse tópico."
 layout: post
 index: true
-parent: /projetos
+parent: /
 lesson: 0
 ---
 
