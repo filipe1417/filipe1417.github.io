@@ -17,7 +17,7 @@
                   {% if entry.subsubdiretorios[0] %}
                     <ul class="dropdown-container">
                      {% for subentry in entry.subsubdiretorios %}
-                     <li><a href="{{ subentry.url }}">{{ subentry.pagina }}</a></li>
+                     <li><a class="topicos-dropdown" href="{{ subentry.url }}">{{ subentry.pagina }}</a></li>
                      {% endfor %}
                     </ul>
                   {% endif %}

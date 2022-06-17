@@ -80,8 +80,9 @@ html {
     --bg-card: #828282;
     --texto-card: var(--bg);
     --heading-card: var(--bg);
-    --heading-navbar: #29648c ;
-    --bg-barra-lateral: var(--text)
+    --heading-navbar: #1f242A ;
+    --bg-barra-lateral: #1f242A;
+    --topicos-navbar: #74c0fc;
 }
 // -------------- THEME SWITCHER -------------- //
 @mixin dark-appearance {
@@ -98,8 +99,9 @@ html {
       --bg-card: #4A5563;
       --texto-card: var(--text);
       --heading-card: var(--headings);
-      --heading-navbar: #29648C;
+      --heading-navbar: #fcfcfc;
       --bg-barra-lateral: #fcfcfc;
+      --topicos-navbar:  #1f242a;
   };
 }
 html[data-theme="dark"] { @include dark-appearance; }

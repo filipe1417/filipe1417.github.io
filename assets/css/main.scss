@@ -36,19 +36,27 @@ pre {
     list-style: none;
 }
 .barra-lateral a{
-	color: var(--bg-secondary);
+    color: var(--bg-secondary);
     padding-left: 15px;
     text-decoration: none;
 }
 
 .titulo-topico{
     font-size: 18px;
-    color: var(--heading-navbar) !important;
+    color: var(--topicos-navbar) !important;
     font-weight: bold;
 }
 
 .titulo-topico:hover{
-  color: var(--bg-secondary) !important;
+  color: var(--bg-card) !important;
+}
+
+.topicos-dropdown{
+  width: 285px;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid black;
+  color: var(--text) !important;
 }
 
 .div-titulo-navbar{
@@ -60,7 +68,7 @@ pre {
 }
 .titulo-navbar{
 	font-size: 22px;
-	color: var(--text);
+	color: var(--topicos-navbar);
     padding: 10px 0;
     padding: 4px 6px;
 }
@@ -76,10 +84,11 @@ pre {
 }
 
 .dropdown{
+  background: var(--bg-card);
 }
 .active{
-    color: var(--text) !important;
-    background: var(--heading-navbar);
+    color: var(--bg) !important;
+    background: var(--text);
 }
    
 .nopadding {
@@ -87,11 +96,13 @@ pre {
 }
 
 .dropdown-btn:hover{
-    background: var(--heading-navbar);
-    color: var(--text);
+    background: var(--text);
+    color: var(--bg);
 }
 .dropdown-container{
     display: none;
+    padding: 0;
+    margin: 0;
 }
 
 @media only screen and (max-device-width: 1124px) {
