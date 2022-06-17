@@ -9,14 +9,13 @@ layout: blog
 </head>
 <p>Os conteúdos estão dividos em coleções. Cada coleção contém um conjunto de módulos sobre determinados temas. Abaixo do nome de cada coleção estão os conteúdos existentes até o momento.</p>
 <div class="grid-container">
+
     <div class="bloco">
-        <a href="/analise-de-trafego">
-        <div>
+        <a class="" href="/analise-de-trafego">
             <h2>Análise de tráfego</h2>
             <ul>
                 <li>Wireshark</li>
             </ul>
-        </div>
         </a>
     </div>
     <div class="bloco">

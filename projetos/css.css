@@ -5,7 +5,6 @@
 }
     
 .bloco{
-    background: var(--bg-secondary);
     border-radius:15px;
     margin: 15px;
     border: 1px solid
@@ -25,16 +24,12 @@
     padding-top: 15px;
 }
 
-.bloco:hover{
-   background: var(--bg-card);
-}
-
 .bloco:hover h2{
-    color: var(--heading-card);
+    color: var(--bg-card);
 }
 
 .bloco:hover li{
-    color: var(--texto-card);
+    color: var(--bg-card);
 }
 
 @media (max-width: 700px) {
