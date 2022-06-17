@@ -2,7 +2,9 @@
 title: Análise de tráfego
 description: "Nesse tópico, serão compartilhados conteúdos sobre análise de tráfego em redes utilizando diferentes ferramentas já conhecidas, assim como criando algumas."
 layout: post
+index: true
 parent: /projetos
+lesson: 0
 ---
 
 <html>
@@ -15,21 +17,10 @@ parent: /projetos
 
 <h2>Wireshark</h2>
 <ul class ="horizontal-list">
-    <li class="card">
-        <a class="bloco" href="wireshark-profiles">
-            <span class="heading-card">Profiles</span>
-            <hr>
-            <p class="descricao-card">Customizando o Layout do wireshark para melhor análise.</p>
-        </a>
-    </li>
-     <li class="card">
-        <a class="bloco" href="wireshark-filtros">
-            <span class="heading-card">Filtros</span>
-            <hr>
-            <p class="descricao-card">Quais os tipos de filtros e como utilizá-los corretamente.</p>
-        </a>
-    </li>
-</ul>
+    
+    {% include card_list.html collection=site.analise-de-trafego  %}
+    
+  </ul>
 
 </body>
 </html>

@@ -11,12 +11,15 @@ collections:
   scanning:
     output: true
     permalink: /:collection/:name
+    sort_by: lesson
   man-in-the-middle:
     output: true
     permalink: /:collection/:name
+    sort_by: lesson
   analise-de-trafego:
     output: true
     permalink: /:collection/:name
+    sort_by: lesson
 collections_dir: projetos
 
 favicon: "./icon.png"

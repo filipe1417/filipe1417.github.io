@@ -1,27 +1,10 @@
-.bloco{
-    display: inline-block !important;
-    width: 100% !important;
-    height: 100% !important;
+.card li{
+  list-style: none;
 }
 
-.bloco span{
-    color: var(--headings);
+.titulo-card{
+  padding-top: 10px;
 }
-
-.card {
-    padding:0 !important;
-}
-
 .card:hover{
-    background: var(--bg-card);
-    border: 1px solid;
+  background:var(--bg-secondary)
 }
-
-.bloco:hover .descricao-card{
-    color: var(--texto-card);
-}
-
-.bloco:hover .heading-card{
-    color: var(--heading-card);
-}
-

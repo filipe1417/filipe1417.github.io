@@ -1,6 +1,7 @@
 ---
-title: Wireshark profiles
-description: "Uso dos perfis para melhor utilização do wireshark."
+title: Profiles
+description: "Customizando o layout do wireshark para melhor análise."
+lesson: 1
 layout: post
 parent: "/analise-de-trafego"
 ---

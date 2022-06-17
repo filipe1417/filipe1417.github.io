@@ -2,7 +2,9 @@
 title: Man in the middle
 description: "Existem diversas técnicas que permitem a execução de um Man in the middle. Alguns tipos serão abordados nesse tópico."
 layout: post
+index: true
 parent: /projetos
+lesson: 0
 ---
 
 <html>
@@ -14,22 +16,8 @@ parent: /projetos
 - Note que é possível realizar um ataque MITM em diversos hosts simultaneamente, mas ainda assim, o invasor estará somente entre duas pontas - origem e destino dos pacotes e da comunicação naquele momento.
 
 <h2>ARP poisoning/spoofing</h2>
-<ul class ="horizontal-list">
-    <li class="card">
-        <a class="bloco" href="protocolo-arp">
-            <span class="heading-card">ARP</span>
-            <hr>
-            <p class="descricao-card">Funcionamento do ARP. Prática realizada com o Scapy junto ao python.</p>
-        </a>
-    </li>
-     <li class="card">
-        <a class="bloco" href="arp-poisoning">
-            <span class="heading-card">Poisoning</span>
-            <hr>
-            <p class="descricao-card">O que é o envenenamento ARP e como alcançar o MITM - entre outros ataques.</p>
-        </a>
-    </li>
-</ul>
+
+  {% include card_list.html collection=site.man-in-the-middle  %}
 
 </body>
 </html>
